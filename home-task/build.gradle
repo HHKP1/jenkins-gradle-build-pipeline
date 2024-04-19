@@ -3,13 +3,11 @@ plugins {
 }
 
 group = 'maven.4'
-version = '1.0'
+// version = '1.0'
 
 repositories {
     mavenCentral()
 }
-
-// ext.ARTEFACT_NAME = ''
 
 dependencies {
     implementation 'org.apache.commons:commons-collections4:4.0'
@@ -56,7 +54,7 @@ task hello {
 task buildArtifact(type: Jar) {
     // Configure the build task
     from sourceSets.main.output
-    archiveFileName.set(ARTEFACT_NAME + '.jar')
+    archiveFileName.set(project.ARTEFACT_NAME + '.jar')
     destinationDirectory.set(file('build/libs'))
     manifest {
         attributes 'Main-Class': 'com.test.Project'
