@@ -17,7 +17,7 @@ pipeline {
             steps {
                 // Checkout the Git repository
                 script {
-                    checkoutStep(this, 'vserdiukov', 'https://github.com/HHKP1/jenkins-maven-pipeline.git')
+                    checkoutStep(this, 'vserdiukov', 'https://github.com/HHKP1/jenkins-gradle-build-pipeline.git')
                 }
             }
         }
