@@ -24,6 +24,8 @@ pipeline {
         stage('Build') {
             steps {
                 dir('home-task') {
+                    sh 'gradle wrapper'
+                    sh 'chmod +x gradlew'
                     sh './gradlew clean build -PARTEFACT_NAME=hello-${BUILD_NUMBER}' // Build the project
                     sh 'java -jar target/*.jar >> output.log' // Run JAR and save output to output.log
                 }
