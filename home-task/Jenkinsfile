@@ -72,7 +72,7 @@ pipeline {
                     archiveArtifacts artifacts: 'output.log', fingerprint: true
 
                 // Create a tar.gz file containing both the JAR file and the output log file
-                    sh 'tar -czf hello-${BUILD_NUMBER}.tar.gz target/*.jar output.log'
+                    sh 'tar -czf hello-${BUILD_NUMBER}.tar.gz build/libs/*.jar output.log'
                 }
             }
         }

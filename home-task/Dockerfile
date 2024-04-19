@@ -13,4 +13,4 @@ COPY hello-$BUILD_NUMBER.tar.gz /app/
 RUN tar -xzf hello-$BUILD_NUMBER.tar.gz
 
 # Set the command to run the application
-CMD ["sh", "-c", "java -jar /app/target/hello-${BUILD_NUMBER}.jar"]
+CMD ["sh", "-c", "java -jar /app/build/libs/hello-${BUILD_NUMBER}.jar"]
