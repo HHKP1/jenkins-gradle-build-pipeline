@@ -9,6 +9,8 @@ repositories {
     mavenCentral()
 }
 
+ext.ARTEFACT_NAME = ''
+
 dependencies {
     implementation 'org.apache.commons:commons-collections4:4.0'
     implementation 'log4j:log4j:1.2.17'
