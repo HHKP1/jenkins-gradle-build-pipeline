@@ -34,7 +34,7 @@ pipeline {
         stage('Create Tar File') {
             steps {
                 dir('home-task') {
-                    sh 'tar -czf hello-${BUILD_NUMBER}.tar.gz target/*.jar output.log'
+                    sh 'tar -czf hello-${BUILD_NUMBER}.tar.gz build/libs/*.jar output.log'
                 }
             }
         }
