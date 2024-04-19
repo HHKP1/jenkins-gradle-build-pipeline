@@ -10,7 +10,7 @@ pipeline {
     }
 
     tools {
-        maven "maven"
+        gradle "gradle-8.5"
     }
     stages {
         stage('Checkout SCM...') {
