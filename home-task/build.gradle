@@ -54,7 +54,7 @@ task hello {
 task buildArtifact(type: Jar) {
     // Configure the build task
     from sourceSets.main.output
-    archiveFileName.set("${project.ARTEFACT_NAME}.jar")
+    archiveFileName("${project.ARTEFACT_NAME}.jar")
     destinationDirectory.set(file('build/libs'))
     manifest {
         attributes 'Main-Class': 'com.test.Project'
