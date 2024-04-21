@@ -27,7 +27,7 @@ pipeline {
                     sh 'gradle wrapper'
                     sh 'chmod +x gradlew'
                     sh './gradlew clean build -PARTEFACT_NAME=hello-${BUILD_NUMBER}' // Build the project
-                    sh 'java -jar build/libs/*.jar >> output.log' // Run JAR and save output to output.log
+                    sh 'java -jar build/libs/hello-${BUILD_NUMBER}.jar >> output.log' // Run JAR and save output to output.log
                 }
             }
         }
