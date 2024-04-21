@@ -30,7 +30,6 @@ task printArtefactName {
 
 task buildCustom {
     // Define a custom build task
-    dependsOn 'build'
     doLast {
         println 'Custom build task executed.'
     }
@@ -38,7 +37,7 @@ task buildCustom {
 
 task testCustom {
     // Define a custom test task
-    dependsOn 'test'
+    dependsOn 'buildCustom'
     doLast {
         println 'Custom test task executed.'
     }
